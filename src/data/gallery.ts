@@ -107,17 +107,10 @@ export const videos: VideoItem[] = [
     src: "https://pub-7b3afe1476824e7d9ad09c338b8c0477.r2.dev/Boothakalam%20The%20Past.MP4",
   },
   {
-    title: "NYC — Short",
-    date: "2020-02-14",
-    place: "New York, NY",
-    caption: "New York, early days. one of the first cuts.",
-    src: "https://pub-7b3afe1476824e7d9ad09c338b8c0477.r2.dev/NYC%20-%20Short.MP4",
-  },
-  {
     title: "The 718",
     date: "2020-02-14",
     place: "Highway 1, CA",
-    caption: "top down on Highway 1. California coast, no stops.",
+    caption: "top down on Highway 1. California coast",
     src: "https://pub-7b3afe1476824e7d9ad09c338b8c0477.r2.dev/718%20v2.MP4",
   },
   {
@@ -131,7 +124,7 @@ export const videos: VideoItem[] = [
     title: "ATV — Cozumel",
     date: "2025-08-02",
     place: "Cozumel, Mexico",
-    caption: "ATVs through Cozumel. dust, sun, no map.",
+    caption: "ATVs through Cozumel.",
     src: "https://pub-7b3afe1476824e7d9ad09c338b8c0477.r2.dev/atv%20cozumel.mov",
   },
   {
@@ -145,7 +138,7 @@ export const videos: VideoItem[] = [
     title: "Illahi",
     date: "2023-10-14",
     place: "Chicago, IL",
-    caption: "Chicago nights, set to Illahi.",
+    caption: "Chicago nights.",
     src: "https://pub-7b3afe1476824e7d9ad09c338b8c0477.r2.dev/illahi.M4V",
   },
 ];
