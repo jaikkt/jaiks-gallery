@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { VideoItem } from "@/data/gallery";
+import { posterSlug } from "@/data/posterSlug";
 
 export function VideoTile({
   video,
@@ -46,6 +47,8 @@ export function VideoTile({
     year: "numeric",
   });
 
+  const poster = video.poster ?? `/posters/${posterSlug(video)}.jpg`;
+
   return (
     <button
       ref={tileRef}
@@ -57,16 +60,25 @@ export function VideoTile({
       className="group relative block aspect-[4/5] w-full cursor-pointer overflow-hidden rounded-lg bg-zinc-900"
       aria-label={`Play ${video.title}`}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={poster}
+        alt=""
+        aria-hidden
+        loading="lazy"
+        decoding="async"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      />
       {shouldLoad && (
         <video
           ref={videoRef}
           src={`${video.src}#t=0.5`}
-          poster={video.poster}
+          poster={poster}
           muted
           loop
           playsInline
           preload="metadata"
-          className="pointer-events-none h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          className="pointer-events-none relative h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         />
       )}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

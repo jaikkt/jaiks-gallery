@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "posters": "tsx scripts/generate-posters.ts"
   },
   "dependencies": {
     "framer-motion": "^11.11.0",
@@ -18,8 +19,10 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "ffmpeg-static": "^5.3.0",
     "postcss": "^8",
     "tailwindcss": "^4.0.0",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
